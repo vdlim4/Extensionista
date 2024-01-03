@@ -80,13 +80,13 @@ h2 {
     color: #c0c0c0;
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
     justify-content: center;
 }
 
 .estatistica p {
     width: 600px;
     height: auto;
+    padding: 20px;
 }
 
 .estatistica p:last-child { 
@@ -162,10 +162,10 @@ h2 {
     color: #c0c0c0;
     display: flex;
     flex-direction: column;
-    padding: 3rem;
+    padding-top: 3rem;
 }
 
-.nome {
+.nome, .profissao {
     margin: 0 20px 20px 0;
     width: 150px;
 }
@@ -180,13 +180,68 @@ h2 {
     margin: 1rem 0;
 }
 
+.painel-comentarios {
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.div-nova {
+    background-color: #c0c0c0;
+    padding: 0 1rem;
+    width: 40%;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+.div-nova p {
+    word-wrap: break-word;
+}
+
 .rodape {
     align-items: center;
     background-color: #1572A1;
     display: flex;
     font-weight: bold;
-    height: 50px;
+    flex-direction: column;
+    height: auto;
     justify-content: center;
+    padding: 5px;
+    text-align: center;
+}
+
+.rodape span {
+    font-size: 10pt;
+    line-height: 1.2rem;
+}
+
+@media screen and (max-width: 1270px) {
+    .estatistica p {
+        width: auto;
+        padding: 0;
+    }
+    .gif-teorico {
+        display: none;
+    }
+    .img-port, .img, .img-menor {
+        width: 75%;
+        left: 0;
+        border-radius: 0;
+        border: none;
+    }
+    .relatos-container {
+        flex-wrap: wrap;
+    }
+    .relatos-texto {
+        width: 100%;
+        margin: 0 5% 0 5%;
+    }
+    .img-cargos {
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 758px) {
@@ -200,7 +255,7 @@ h2 {
     .chamada h1 {
         padding-top: 2rem;
     }
-    .padrap {
+    .padrao {
         font-size: 12pt;
     }
     .gif-teorico {
@@ -223,6 +278,12 @@ h2 {
         margin-top: 20px;
     }
     .form-comentario {
-        padding: 0 0 2rem 0;
+        padding-top: 2rem;
+    }
+    .painel-comentarios {
+        margin-bottom: 2rem;
+    }
+    .div-nova {
+        width: 90%;
     }
 }
